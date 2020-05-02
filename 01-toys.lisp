@@ -102,3 +102,66 @@
 ; the law of eq
 ; eq takes two arguments
 ; both arguments must be atoms
+
+; CH 1 Exercises
+;
+;1 10 different atoms
+'foo
+'bar
+'baz
+'*asdf
+1337
+'lol
+'book
+1234
+'phone
+'tree
+'grass
+
+;2 Make different lists
+'(foo bar)
+'(bar baz)
+'(baz *asdf)
+'(1337 1234)
+'(lol book)
+'(phone tree)
+'(grass tree)
+'(foo baz)
+'(phone foo)
+'(tree grass book)
+'(1234 1337 phone)
+'(baz bar)
+'(tree grass lol)
+
+;4 solve
+(car (cons 'french '(fries)))  ; french
+(cdr (cons 'oranges '(apples and peaches))) ; (apples and peaches)
+
+;5 solve
+(eq 'lisp 'lisp)
+
+;6 if a is an atom, is there a list l that makes (null (cons a l)) true?
+(null (cons '() '()))
+
+;7 determine value of
+(cons 'x 'y) ; (x y)
+(cons '() '()) ; (NIL)
+(car '()) ; NIL
+(cdr '(())) ; NIL
+
+; 8 true or false
+(atom (car '((meatballs) and spaghetti))) ; false
+(null (cdr '((meatballs)))) ; tru§e
+(eq (car '(two meatballs)) (car (cdr '(two meatballs)))) ; false
+(atom (cons 'meat '(ball))) ; false
+
+; 9 solve
+(car (cdr (cdr (car '((kiwis mangoes lemons) and (more)))))) ; lemons
+(car (cdr (car (cdr '(() (eggs and (bacon)) (for) (breakfast)))))) ; and
+(car (cdr (cdr (cdr '(() () () (and (coffee)) please))))) ; (and (coffee))
+
+; 10 How to get the word Harry
+(car (cdr (cdr '(apples in (Harry has a backyard)))))
+(cdr (cdr '(apples and Harry)))
+(car (cdr (cdr (car '(((apples) and ((Harry))) in his backyard)))))
+
