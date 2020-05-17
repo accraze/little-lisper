@@ -161,7 +161,7 @@
 (car (cdr (cdr (cdr '(() () () (and (coffee)) please))))) ; (and (coffee))
 
 ; 10 How to get the word Harry
-(car (cdr (cdr '(apples in (Harry has a backyard)))))
-(cdr (cdr '(apples and Harry)))
-(car (cdr (cdr (car '(((apples) and ((Harry))) in his backyard)))))
+(car (car (cdr (cdr '(apples in (Harry has a backyard))))))
+(car (cdr (cdr '(apples and Harry))))
+(car (car (car (cdr (cdr (car '(((apples) and ((Harry))) in his backyard)))))))
 
